@@ -7,7 +7,8 @@ body, h1, h2, p, a {
 /* Basic styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #222;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -26,8 +27,9 @@ nav {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -38,20 +40,43 @@ section {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    text-align: center;
 }
 
 h1, h2 {
-    color: #333;
+    color: #fff;
 }
 
 .project {
     margin-bottom: 20px;
     padding: 20px;
-    background-color: #eee;
+    background-color: #444;
     border-radius: 5px;
+    text-align: left;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #0056b3;
 }
 
 footer {
