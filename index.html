@@ -1,22 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the homepage of my website.</p>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <h2 id="about">About</h2>
-    <p>This website was created as a personal project.</p>
-    <h2 id="services">Services</h2>
-    <p>Services</p>
-    <h2 id="contact">Contact</h2>
-    <p>If you would like to get in touch, please email us at contact@mywebsite.com.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* ... (unchanged styles) ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed,
+            dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue,
+            euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi,
+            non fermentum diam nisl sit amet erat.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#">View Project</a>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Provide information on how visitors can contact you. This could include email, LinkedIn, GitHub, etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2023 Your Name
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
