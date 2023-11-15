@@ -6,6 +6,26 @@
     <title>Your Name - Portfolio</title>
     <style>
         /* ... (unchanged styles) ... */
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .view-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .view-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -36,20 +56,22 @@
         
         <div class="project">
             <h3>Project 1</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 1 Image">
             <p>
                 Description of your project. Include technologies used and your role in the project.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
             </p>
-            <a href="#">View Project</a>
+            <a href="#" class="view-button">View Project</a>
         </div>
 
         <div class="project">
             <h3>Project 2</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 2 Image">
             <p>
                 Description of your project. Include technologies used and your role in the project.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
             </p>
-            <a href="#">View Project</a>
+            <a href="#" class="view-button">View Project</a>
         </div>
         
         <!-- Add more projects as needed -->
