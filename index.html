@@ -1,90 +1,105 @@
-/* Reset some default browser styles */
-body, h1, h2, p, a {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* ... (unchanged styles) ... */
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
 
-/* Basic styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #222;
-    color: #fff;
-    line-height: 1.6;
-}
+        .view-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
+        .view-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+    </header>
 
-nav {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed,
+            dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue,
+            euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi,
+            non fermentum diam nisl sit amet erat.
+        </p>
+    </section>
 
-nav a:hover {
-    color: #007bff;
-}
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project">
+            <h3>Project 1</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 1 Image">
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#" class="view-button">View Project</a>
+        </div>
 
-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #333;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    text-align: center;
-}
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 2 Image">
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#" class="view-button">View Project</a>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
 
-h1, h2 {
-    color: #fff;
-}
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Provide information on how visitors can contact you. This could include email, LinkedIn, GitHub, etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+        </p>
+    </section>
 
-.project {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #444;
-    border-radius: 5px;
-    text-align: left;
-}
+    <footer>
+        &copy; 2023 Your Name
+    </footer>
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-.view-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.view-button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
