@@ -1,32 +1,65 @@
-/* Define the three colors */
-:root {
-  --primary-color: #6200EA; /* Purple */
-  --secondary-color: #F9A825; /* Yellow */
-  --tertiary-color: #03DAC6; /* Teal */
+/* Reset some default browser styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
 }
 
-/* Apply the colors to various elements */
+/* Basic styling */
 body {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-  color: var(--tertiary-color);
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
 }
 
-a {
-  color: var(--secondary-color);
+nav {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-a:hover {
-  color: var(--tertiary-color);
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
-.container {
-  background-color: var(--tertiary-color);
+nav a:hover {
+    color: #007bff;
 }
 
-#main-section {
-  color: var(--primary-color);
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
