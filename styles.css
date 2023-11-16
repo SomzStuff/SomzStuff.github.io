@@ -110,14 +110,17 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 400px; /* Set a fixed height for the slideshow container */
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+    display: none;
+    height: 100%; /* Make sure the images fill the entire height of the slideshow container */
+    object-fit: cover; /* Maintain aspect ratio while covering the entire container */
 }
 
 /* Next & previous buttons */
