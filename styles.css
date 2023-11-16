@@ -53,8 +53,9 @@ section {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     text-align: center;
-    vertical-align: top;
+    align-items: flex-start; /* Align items (text) to the top */
 }
+
 
 h1, h2 {
     color: #fff;
