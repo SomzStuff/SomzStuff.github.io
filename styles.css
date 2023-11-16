@@ -114,13 +114,14 @@ footer {
     position: relative;
     margin: auto;
     height: 400px; /* Set a fixed height for the slideshow container */
+    overflow: hidden; /* Hide any overflow beyond the fixed height */
 }
 
 /* Hide the images by default */
 .mySlides {
     display: none;
-    height: 100%; /* Make sure the images fill the entire height of the slideshow container */
-    object-fit: cover; /* Maintain aspect ratio while covering the entire container */
+    width: 100%; /* Make sure the images fill the entire width of the slideshow container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
 
 /* Next & previous buttons */
