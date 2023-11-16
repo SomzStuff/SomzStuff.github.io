@@ -44,7 +44,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: flex-start; Remove this line */
     flex: 1; /* Allow section to grow and push footer down */
     min-height: 100vh; /* Set minimum height to the viewport height */
     margin: 20px 0;
@@ -53,9 +53,7 @@ section {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     text-align: center;
-    align-items: flex-start; /* Align items (text) to the top */
 }
-
 
 h1, h2 {
     color: #fff;
