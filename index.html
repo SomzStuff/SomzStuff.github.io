@@ -6,90 +6,79 @@
     <title>Your Name - Portfolio</title>
     <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Add additional styling specific to the slideshow */
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-    </style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="mySlides">
-            <img src="orange-42395_1280.webp" alt="Image 1">
-        </div>
-        <div class="mySlides">
-            <img src="purple-coneflower-8225677_1280.webp" alt="Image 2">
-        </div>
-        <!-- Add more slides as needed -->
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
     <header>
         <h1>Your Name</h1>
         <p>Web Developer</p>
     </header>
 
-    <!-- ... (rest of your content) ... -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed,
+            dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue,
+            euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi,
+            non fermentum diam nisl sit amet erat.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        
+        <div class="project">
+            <h3>Project 1</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 1 Image">
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#" class="view-button">View Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="https://via.placeholder.com/800x400" alt="Project 2 Image">
+            <p>
+                Description of your project. Include technologies used and your role in the project.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+            </p>
+            <a href="#" class="view-button">View Project</a>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            Provide information on how visitors can contact you. This could include email, LinkedIn, GitHub, etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+        </p>
+    </section>
 
     <footer>
         &copy; 2023 Your Name
     </footer>
 
     <script>
-        let slideIndex = 0;
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        function showSlides() {
-            let i;
-            const slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
-        }
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        showSlides(); // Initial display
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
