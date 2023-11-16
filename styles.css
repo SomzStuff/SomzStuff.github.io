@@ -55,6 +55,10 @@ section {
     text-align: center;
 }
 
+section p {
+    margin: 0; /* Reset the margin for the <p> element */
+}
+
 h1, h2 {
     color: #fff;
 }
